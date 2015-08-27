@@ -1,12 +1,12 @@
-=head1 NAME
+NAME
  
 Acme::Flutterby - An object-oriented interface to a butterfly.  In what else but Perl 6.
  
-=head1 VERSION
+VERSION
  
 Version 0.01
  
-=head1 SYNOPSIS
+SYNOPSIS
  
   use Acme::Flutterby;
   my $Flutterby = Flutterby->new;
@@ -14,22 +14,19 @@ Version 0.01
   $Flutterby.play;
   $flutterby.sacrifice(to-who=>'perl_gods');
  
-=head1 DESCRIPTION
+DESCRIPTION
  
 This module provides a simplistic, but powerful, interface to a Butterfly.
  
-=head1 OBJECT INTERFACE
+OBJECT INTERFACE
  
-=over
- 
-=item B<new>
- 
+
+new
+
 Create a new buterfly, all by yourself! :)
  
-=cut
 
-
-=item B<feed>
+feed
  
 A well-fed butterfly is a happy butterfly.
 The Perl gods like happy butterflies.
@@ -39,10 +36,7 @@ No one likes a sad butterfly.
 [Technical details: returns 1 for a happy hungry butterfly, and returns 0
 for a big full butterfly. ]
  
-=cut
-
-
-=item B<play>
+play
  
 A good butterfly trainer should play often with their butterfly, 
 as this makes them happy.
@@ -52,38 +46,25 @@ they need rest instead then.
 [Technical details: returns 1 for a butterfly that wants to play more,
 and returns for a butterfly that needs a nap. ]
  
-=cut
-=item B<nap>
- 
+nap
+
 Sometimes, even a big butterfly get tired.
 When butterflies are tired, they need a nap to make them 
 feel better! But, if the butterfly isn't tired, making it
 try to take a nap will make it a sad butterfly. :(
  
-=cut
-
-
-=item B<sacrifice>
+sacrifice
  
 Ah, we finally have reached the last goal of all good butterflies. Sacrificing to the Perl gods. 
 You'd best hope your butterfly was happy enough, or death to your Perl script will come! :(
  
-=back
-=cut
-
-
-=head1 AUTHOR
+AUTHOR
  
 John Scoles <byterock@cpan.org>
  
-=head1 LICENSE
+LICENSE
  
 Copyright (c) John Scoles 
  
 This module may be used, modified, and distributed under BSD license. See the beginning of this file for said license.
- 
-=head1 SEE ALSO
- 
- 
- 
-=cut
+
