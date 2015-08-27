@@ -7,5 +7,5 @@
             "Acme::Flutterby" : "lib/Acme/Flutterby.pm"
         },
         "depends" : [ ],
-        "source-url" : "git://github.com/you/Vortex-TotalPerspective.git"
+        "source-url" : "https://github.com/byterock/Acme-Flutterby.git"
     }
