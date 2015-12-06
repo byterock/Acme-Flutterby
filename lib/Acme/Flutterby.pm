@@ -9,26 +9,26 @@ class Flutterby is export {
         $.foodage++;
         if (self.foodage < 10) {
             self.happiness++;
-            return;
+        } else {
+            self.happiness--;
         }
-        self.happiness--;
-        return;
+        return self.foodage < 9;
     }
 
     method play() {
         if (self.tired) {
             self.happiness -= 5;
-            return;     }
+            return False;
+        }
         my $play = 20.rand().Int;
         self.happiness += 2;
 
         if ($play > 10) {
-
             self.tired = True;
-            return;
+        } else {
+            self.tired = False;
         }
-        self.tired = False;
-        return;
+        return not self.tired;
     }
 
     method nap {
@@ -45,12 +45,12 @@ class Flutterby is export {
         if (lc($to-who) ne 'perl_gods') {
             say("You can only sacrifice to a Perl God");
         }
-
-        if (self.happiness >10) {
+        if (self.happiness > 10) {
             say "Congradulations!! Your sacrificial Flutterby has appeased the Perl gods :) !";
-            exit;
+            exit 0;
         } else {
-            say("Sorry, your Flutterby was not happy enough.  Try to raise it better next time :(!"~self.happiness);
+            say("Sorry, your Flutterby was not happy enough.  Try to raise it better next time :( !");
+            exit self.happiness - 10;
         }
     }
 }
@@ -94,7 +94,7 @@ The Perl gods like happy butterflies.
 Too much food makes a sad butterfly though. :(
 No one likes a sad butterfly.
 
-[Technical details: returns 1 for a happy hungry butterfly, and returns 0
+[Technical details: returns True for a happy hungry butterfly, and returns False
 for a big full butterfly. ]
 
 =cut
@@ -106,8 +106,8 @@ as this makes them happy.
 Butterflies get tired though, and then they don't like to play,
 they need rest instead then.
 
-[Technical details: returns 1 for a butterfly that wants to play more,
-and returns for a butterfly that needs a nap. ]
+[Technical details: returns True for a butterfly that wants to play more,
+and returns False for a butterfly that needs a nap. ]
 
 =cut
 =item B<nap>
