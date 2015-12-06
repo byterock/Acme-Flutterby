@@ -32,6 +32,7 @@ class Flutterby is export {
     }
 
     method nap {
+        sleep 1/3;
         if (!self.tired ) {
             self.happiness -= 1;
             return;
