@@ -55,6 +55,8 @@ class Flutterby is export {
     }
 }
 
+=begin pod
+
 =head1 NAME
 
 Acme::Flutterby - An object-oriented interface to a butterfly.  In what else but Perl 6.
@@ -138,3 +140,5 @@ This module may be used, modified, and distributed under BSD license. See the be
 =head1 SEE ALSO
 
 =cut
+
+=end pod
